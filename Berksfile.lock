@@ -1,0 +1,13 @@
+DEPENDENCIES
+  windowsserver2012
+    path: .
+    metadata: true
+
+GRAPH
+  chef_handler (1.1.6)
+  iis (2.1.2)
+    windows (>= 1.2.6)
+  windows (1.30.2)
+    chef_handler (>= 0.0.0)
+  windowsserver2012 (0.1.0)
+    iis (>= 0.0.0)

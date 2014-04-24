@@ -6,4 +6,5 @@ group :development do
   gem "serverspec"
   gem "vagrant-wrapper"
   gem "kitchen-driver-vagrant_provision"
+  gem "berkshelf"
 end
