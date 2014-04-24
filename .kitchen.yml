@@ -2,12 +2,15 @@
 driver:
   name: vagrant
 
-provisioner:
-  name: chef_solo
-
 platforms:
-  - name: ubuntu-12.04
-  - name: centos-6.4
+- name: windows_2012_r2_virtualbox
+  driver:
+    name: vagrant_provision
+  driver_config:
+    box: windows_2012_r2_virtualbox
+    guest: :windows
+    use_vagrant_provision: true
+    vagrantfile_erb: Vagrantfile-windows-chef.erb
 
 suites:
   - name: iis
