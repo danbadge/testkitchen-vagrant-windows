@@ -1,4 +1,2 @@
-name "windowsserver2012"
+name "windows2012"
 version "0.1.0"
-
-depends "iis"
