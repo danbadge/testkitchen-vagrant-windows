@@ -8,11 +8,12 @@ platforms:
     name: vagrant_provision
   driver_config:
     box: windows_2012_r2_virtualbox
+    box_url: http://your-packer-created-windows.box
     guest: :windows
     use_vagrant_provision: true
     vagrantfile_erb: Vagrantfile-windows-chef.erb
 
 suites:
-  - name: iis
-    run_list:
+  - name: default
+    run_list: [ "recipe[iis::default]", "recipe[git::default]" ]
     attributes:
